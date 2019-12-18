@@ -10,9 +10,18 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * Fetching Rss Library.
+ */
 @Service
 public class RssReaderLibrary {
 
+    /**
+     * fetch Rss.
+     *
+     * @param url fetch target url.
+     * @return {@link SyndFeed}
+     */
     public SyndFeed fetchRss(@NonNull final String url) {
         try {
             return new SyndFeedInput().build(new XmlReader(new URL(url)));

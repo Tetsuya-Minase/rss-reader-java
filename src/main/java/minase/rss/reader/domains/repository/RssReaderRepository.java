@@ -1,11 +1,17 @@
 package minase.rss.reader.domains.repository;
 
 import minase.rss.reader.domains.model.RssFeedModel;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+/**
+ * repository.
+ */
 public interface RssReaderRepository {
+    /**
+     * fetch rss.
+     *
+     * @return {@link List<RssFeedModel>}
+     */
     List<RssFeedModel> fetchRss();
 }

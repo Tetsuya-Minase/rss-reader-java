@@ -5,6 +5,15 @@ import minase.rss.reader.domains.model.RssFeedResponse;
 
 import java.util.List;
 
+/**
+ * convert Model into Response.
+ */
 public interface RssConverter {
+    /**
+     * to RssFeed Response.
+     *
+     * @param feedModelList feed result rests.
+     * @return {@link RssFeedResponse}
+     */
     RssFeedResponse toResponse(List<RssFeedModel> feedModelList);
 }
